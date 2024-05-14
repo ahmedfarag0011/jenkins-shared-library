@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-import com.example.Docker
+def call() {
+    echo "building the application..."
+    sh 'mvn package'
 
-def call(String imageName) {
-    return new Docker(this).buildDockerImage(imageName)
 }
